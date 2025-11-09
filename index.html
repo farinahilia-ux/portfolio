@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+
+  <style>
+
+    .btn {
+    background: #3a1e05;
+    color: #fff;
+    padding: 20px 40px;
+    text-decoration: none;   /* removes underline */
+    border-radius: 30px;
+    font-size: 18px;
+    display: inline-block;
+    transition: 0.3s;
+  }
+
+.btn:hover {
+  background: #555;
+}
+.intro-section {
+  display: flex;             /* places gallery + text side by side */
+  justify-content: space-between;
+  align-items: center;   /* align at the top */
+  margin: 50px;
+  gap: 40px;                 /* spacing between gallery & text */
+}
+
+.gallery-left {
+  flex: 1;                  /* gallery takes left space */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery-left img {
+  width: 100%;               /* or smaller if you want */
+  max-width: 150px;
+  border-radius: 10px;
+  margin: 0 auto 12px;
+}
+
+.text-right {
+  flex: 2;                   /* text takes more space than gallery */
+  text-align: left;          /* keep paragraphs left-aligned */
+}
+
+.text-left {
+  text-align: center;
+  margin-top: 5px;
+  color: black;
+}
+
+.sub-text{
+  font-size: 23px;
+  text-align: left;
+  color: black;
+  font-family: 'Didot', sans-serif;
+}
+
+.image-strip {
+  width: 100%;                 /* full width */
+  overflow: hidden;             /* hides overflow */
+  background: #FAF3E0;          /* background behind strip */
+  padding: 20px 0;
+}
+
+.strip-track {
+  display: flex;
+  gap: 30px;                    /* spacing between images */
+  animation: scroll 20s linear infinite;
+}
+
+.strip-track img {
+  height: 100px;                /* control strip height */
+  flex-shrink: 0;               /* prevents squishing */
+  border-radius: 8px;
+}
+
+/* Keyframes for moving effect */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);  /* move left */
+  }
+}
+
+  </style>
+</head>
+<body>   
+	  
+        <nav class="navbar">
+          <ul>
+            <li><a href="#home">Home</a></li>
+          <li><a href="gallery.html">My Gallery</a></li>
+          </ul>
+      </nav>
+          
+          <!--Creates header-->
+        <header class="banner_img">
+            <div class="banner_text">
+               <h1>My portfolio site.</h1>
+
+            </div>
+        </header>
+          
+    
+          
+              <main>
+                 <h2>Hi, I’m Farina! </h2>
+                 <p>Design Student in Digital Commerce & Experience.</p>
+                 <p>Exploring the intersection of creativity, technology, and user experience.</p>
+                
+                <br>
+
+                <a href="gallery.html" class="btn">Gallery →</a>
+        </main>
+        <br>
+
+        <hr class="dotted">
+
+      <section class="intro-section">
+        <div class="gallery-left">
+          <h2 class="text-left">Skills</h2>
+          <img src="images/photoshop.webp" alt="Logo1">
+          <img src="images/illustrator.png" alt="Logo2">
+          <img src="images/dreamweaver.png" alt="Logo3">
+          <img src="images/aftereffects.png" alt="Logo4">
+        </div>
+
+        <div class="text-right">
+          <p class="sub-text">From the start of my tertiary education, I have been immersed in IT, with a focus on coding 
+            and UI/UX. Over time, I discovered that what excites me most is the design aspect—bringing interfaces to life 
+            and shaping how users interact with applications and websites. This passion has inspired me to pursue a career 
+            in UI/UX, where I can combine creativity with functionality.</p>
+          <p class="sub-text">I particularly enjoy the process of envisioning how a design should look and feel, as it gives 
+            me a sense of fulfillment and satisfaction. While I am still exploring and refining my personal style, I find myself 
+            naturally drawn toward minimalism. At the same time, I am eager to challenge myself further by mastering more dynamic 
+            and maximalist approaches in the future.</p>
+        </div>
+      </section>
+
+      <div class="image-strip">
+        <div class="strip-track">
+          <img src="images/pic1.png" alt="Picture01">
+          <img src="images/pic2.png" alt="Picture02">
+          <img src="images/pic3.jpg" alt="Picture03">
+          <img src="images/pic4.png" alt="Picture04">
+          <img src="images/pic5.jpg" alt="Picture05">
+          <img src="images/pic6.jpg" alt="Picture06">
+          <img src="images/pic7.jpg" alt="Picture07">
+          <img src="images/pic8.jpg" alt="Picture08">
+          <img src="images/pic9.png" alt="Picture09">
+          <img src="images/pic10.jpg" alt="Picture10">
+          <img src="images/pic11.png" alt="Picture11">
+          <!-- repeat images if you want smoother loop -->
+
+          <img src="images/pic1.png" alt="Picture01">
+          <img src="images/pic2.png" alt="Picture02">
+          <img src="images/pic3.jpg" alt="Picture03">
+          <img src="images/pic4.png" alt="Picture04">
+          <img src="images/pic5.jpg" alt="Picture05">
+          <img src="images/pic6.jpg" alt="Picture06">
+          <img src="images/pic7.jpg" alt="Picture07">
+          <img src="images/pic8.jpg" alt="Picture08">
+          <img src="images/pic9.png" alt="Picture09">
+          <img src="images/pic10.jpg" alt="Picture10">
+          <img src="images/pic11.png" alt="Picture11">
+
+          <img src="images/pic1.png" alt="Picture01">
+          <img src="images/pic2.png" alt="Picture02">
+          <img src="images/pic3.jpg" alt="Picture03">
+          <img src="images/pic4.png" alt="Picture04">
+          <img src="images/pic5.jpg" alt="Picture05">
+          <img src="images/pic6.jpg" alt="Picture06">
+          <img src="images/pic7.jpg" alt="Picture07">
+          <img src="images/pic8.jpg" alt="Picture08">
+          <img src="images/pic9.png" alt="Picture09">
+          <img src="images/pic10.jpg" alt="Picture10">
+          <img src="images/pic11.png" alt="Picture11">
+
+          <img src="images/pic1.png" alt="Picture01">
+          <img src="images/pic2.png" alt="Picture02">
+          <img src="images/pic3.jpg" alt="Picture03">
+          <img src="images/pic4.png" alt="Picture04">
+          <img src="images/pic5.jpg" alt="Picture05">
+          <img src="images/pic6.jpg" alt="Picture06">
+          <img src="images/pic7.jpg" alt="Picture07">
+          <img src="images/pic8.jpg" alt="Picture08">
+          <img src="images/pic9.png" alt="Picture09">
+          <img src="images/pic10.jpg" alt="Picture10">
+          <img src="images/pic11.png" alt="Picture11">
+          
+          <img src="images/pic1.png" alt="Picture01">
+          <img src="images/pic2.png" alt="Picture02">
+          <img src="images/pic3.jpg" alt="Picture03">
+          <img src="images/pic4.png" alt="Picture04">
+          <img src="images/pic5.jpg" alt="Picture05">
+          <img src="images/pic6.jpg" alt="Picture06">
+          <img src="images/pic7.jpg" alt="Picture07">
+          <img src="images/pic8.jpg" alt="Picture08">
+          <img src="images/pic9.png" alt="Picture09">
+          <img src="images/pic10.jpg" alt="Picture10">
+          <img src="images/pic11.png" alt="Picture11">
+        </div>
+      </div>
+          
+          <footer>&copy; 2025 Farina's Website. All rights reserved.</footer>
+          
+       
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+        <script src="js/jquery-3.4.1.min.js"></script>
+    
+        <!-- Include all compiled plugins (below), or include individual files as needed --> 
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap-4.4.1.js"></script>
+</body>
+</html>

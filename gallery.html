@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gallery</title>
+	<link href="styles2.css" rel="stylesheet" type="text/css">
+	
+	<style>
+	.project-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 50px; /* space between strips */
+        margin: 0;
+        padding: 0;
+    }
+
+    /* full-width strip for each project */
+    .project-strip {
+        position: relative;
+        width: 90%;
+        background: #fff;
+        border-radius: 20px;
+        padding: 40px 60px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 12px;
+    }
+
+    .caption {
+        background: #3a1e05;
+        color: #fff;
+        padding: 10px 20px;
+        position: absolute;
+        bottom: 450px;
+        left: 30px;
+        font-size: 15px;
+        border-radius: 30px;
+    }
+    
+
+    .project-caption {
+        position: absolute;       /* position relative to strip */
+        bottom: 0px;             /* distance from bottom */
+        left: 15px;               /* distance from left */
+        color: #3a1e05;
+        font-family: 'Didot', sans-serif;
+        font-size: 15px;
+    }
+
+    /* optional project title */
+    .project-title {
+        font-size: 28px;
+        font-family: 'Didot', sans-serif;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #3a1e05;
+    }
+
+    /* images inside the strip */
+    .project-images {
+        display: flex;
+        flex-wrap: wrap; /* wraps to next row if too many */
+        gap: 20px;
+        justify-content: center; /* center align images */
+        width: 100%;
+    }
+
+    .project-images img {
+        width: auto;         /* don’t stretch */
+        height: auto;        /* keep aspect ratio */
+        max-width: 70%;      /* shrink compared to original (90% of its true size) */
+        max-height: 250px;   /* optional: set a cap so it doesn’t get too tall */
+        border-radius: 12px; /* keep your rounded corners */
+    }
+
+    .project-strip:nth-child(1) {
+        background-color: rgb(243, 203, 211); /* cream */
+    }
+
+    .project-strip:nth-child(2) {
+        background-color: rgb(250, 225, 174); /* cream */
+    }
+
+    .project-strip:nth-child(3) {
+        background-color: rgb(212, 200, 177); /* cream */
+    }
+
+    .project-strip:nth-child(4) {
+        background-color: rgb(238, 226, 206); /* cream */
+    }
+
+    .colour-frame {
+        display: block;       /* removes inline spacing */
+        margin: 15px auto 10px;  /* top margin = 10px, auto center, no bottom margin */
+        max-width: 30%;       /* optional: keep it smaller than strip */
+        height: auto;
+        border-radius: 5px;
+        left: 30px;
+    }
+
+
+	</style>
+</head>
+
+<body>
+	
+		<nav class="navbar">
+	  <ul>
+		<li><a href="index.html">Home</a></li>
+	  <li><a href="#gallery">My Gallery</a></li>
+	  </ul>
+  </nav>
+	
+  <header>
+    <h1>My Gallery</h1>
+  </header>
+
+  <section class="project-gallery">
+
+  <!-- Project 1 -->
+  <div class="project-strip">
+    <h2 class="project-title">School Project - McDonald’s Seasonal Berry Burst Products</h2>
+    <br>
+    <p class="caption">Poster Outcome:</p>
+    <div class="project-images">
+      <img src="images/pic5.jpg" alt="">
+      <img src="images/pic12.jpg" alt="">
+      <img src="images/pic13.jpg" alt="">
+    </div>
+    <img class="colour-frame" src="images/colour2.png" alt="">
+    <p class="project-caption">This is an academic project created for educational purposes only. 
+    McDonald’s and its related marks are trademarks of McDonald’s Corporation.</p>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="project-strip">
+    <h2 class="project-title">School Project - Coffee Festival Poster</h2>
+    <div class="project-images">
+      <img src="images/pic3.jpg" alt="">
+      <img src="images/pic9.png" alt="">
+      <img src="images/pic11.png" alt="">
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="project-strip">
+    <h2 class="project-title">Personal Project - Yellow Haus Logo</h2>
+    <div class="project-images">
+      <img src="images/pic2.png" alt="">
+      <img src="images/pic8.jpg" alt="">
+      <img src="images/pic10.jpg" alt="">
+      <img src="images/pic7.jpg" alt="">
+    </div>
+  </div>
+
+  <!-- Project 4 -->
+  <div class="project-strip">
+    <h2 class="project-title">Personal Project - Logos</h2>
+    <div class="project-images">
+      <img src="images/pic6.jpg" alt="">
+      <img src="images/pic16.png" alt="">
+      <img src="images/pic17.png" alt="">
+    </div>
+  </div>
+
+</section>
+	
+	<footer>&copy; 2025 Farina's Website. All rights reserved.</footer>
+</body>
+</html>
