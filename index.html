@@ -147,17 +147,20 @@
       .banner_text p { font-size: 14px; }
 
       .gallery-left {
-    grid-template-columns: 1fr; /* 1 per row on small screens */
-    text-align: center;
+    display: grid;
+    grid-template-columns: 2fr; /* 1 image per row */
+    gap: 12px;                  /* spacing between images */
+    width: 100%;
+    justify-items: center;
   }
+      
+      .gallery-left img {
+        max-width: 90px;
+      }
       .text-right {
     text-align: left;           /* paragraphs align normally */
     max-width: 100%;            /* prevent stretching */
   }
-      .gallery-left img {
-        max-width: 90px;
-        width: 28%;
-      }
       .sub-text { font-size: 16px; }
       .btn { padding: 10px 18px; font-size: 15px; border-radius: 24px; }
       .strip-track img { height: 60px; }
