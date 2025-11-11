@@ -8,59 +8,95 @@
 
   <style>
 
-    /* Responsive tweaks: add this at the end of the existing <style> block */
+     /* --- REPLACED RESPONSIVE RULES: keep two-column look on small screens --- */
     @media (max-width: 900px) {
       .intro-section {
-        flex-direction: column;
+        /* keep side-by-side on smaller screens but reduce spacing */
+        flex-direction: row;
         align-items: flex-start;
-        margin: 24px;
-        gap: 20px;
+        margin: 20px;
+        gap: 18px;
+        flex-wrap: nowrap;
       }
-      .gallery-left, .text-right {
-        width: 100%;
+
+      /* give gallery a fixed-ish column and let text take remaining space */
+      .gallery-left {
+        flex: 0 0 32%;
         text-align: center;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
       }
-      .text-right { text-align: left; }
+
       .gallery-left img {
-        max-width: 120px;
-        width: calc(25% - 8px);
-        margin: 8px;
-        display: inline-block;
+        /* smaller, consistent thumbnails */
+        width: 48%;
+        max-width: 110px;
+        height: auto;
+        margin: 4px 0;
+        border-radius: 8px;
       }
+
+      .text-right {
+        flex: 1 1 68%;
+      }
+
       .sub-text {
         font-size: 18px;
         line-height: 1.45;
       }
+
       .btn {
-        padding: 12px 24px;
+        padding: 12px 20px;
         font-size: 16px;
       }
+
       .image-strip { padding: 14px 0; }
       .strip-track img { height: 80px; }
       .strip-track { gap: 20px; animation-duration: 25s; }
     }
 
     @media (max-width: 480px) {
+      /* keep two columns but make gallery slightly wider so thumbnails remain visible */
       .intro-section {
         margin: 12px;
         gap: 12px;
       }
-      .banner_text h1 { font-size: 22px; }
-      .banner_text p { font-size: 14px; }
-      .gallery-left img {
-        max-width: 90px;
-        width: 28%;
+
+      .gallery-left {
+        flex: 0 0 36%;
       }
-      .sub-text { font-size: 16px; }
-      .btn { padding: 10px 18px; font-size: 15px; border-radius: 24px; }
+
+      .gallery-left img {
+        width: 100%;
+        max-width: 90px;
+        display: block;
+        margin: 6px auto;
+      }
+
+      .text-right {
+        flex: 1 1 64%;
+      }
+
+      .sub-text {
+        font-size: 16px;
+      }
+
+      .btn { padding: 10px 16px; font-size: 15px; border-radius: 22px; }
+
       .strip-track img { height: 60px; }
       .strip-track { gap: 12px; animation-duration: 30s; }
+
       nav.navbar ul {
         display: flex;
         justify-content: center;
         gap: 12px;
         padding: 8px 0;
       }
+
       footer { padding: 14px; text-align: center; font-size: 14px; }
     }
 
