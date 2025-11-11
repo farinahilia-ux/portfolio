@@ -35,17 +35,15 @@
   text-align: center;
   margin-bottom: 20px;
 
-  display: flex;            /* make gallery images flex items */
-  flex-wrap: wrap;          /* allow images to wrap to next row */
-  justify-content: center;  /* center images horizontally */
+  display: grid;             /* use grid instead of flex */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-auto-rows: auto;      /* rows adjust automatically */
   gap: 12px;                /* spacing between images */
 }
 
 .gallery-left img {
-  width: calc(50% - 6px);   /* 2 per row, minus half the gap */
-  max-width: 150px;
+   width: 100%;               /* fills its grid cell */
   border-radius: 10px;
-  margin: 0;
 }
 
 
