@@ -7,65 +7,7 @@
   <link href="styles.css" rel="stylesheet" type="text/css">
 
   <style>
-    /* Responsive tweaks: add this at the end of the existing <style> block */
-    @media (max-width: 900px) {
-      .intro-section {
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 24px;
-        gap: 20px;
-      }
-      .gallery-left, .text-right {
-        width: 100%;
-        text-align: center;
-      }
-      .text-right { text-align: left; }
-      .gallery-left img {
-        max-width: 120px;
-        width: calc(25% - 8px);
-        margin: 8px;
-        display: inline-block;
-      }
-      .sub-text {
-        font-size: 18px;
-        line-height: 1.45;
-      }
-      .btn {
-        padding: 12px 24px;
-        font-size: 16px;
-      }
-      .image-strip { padding: 14px 0; }
-      .strip-track img { height: 80px; }
-      .strip-track { gap: 20px; animation-duration: 25s; }
-    }
-
-    @media (max-width: 480px) {
-      .intro-section {
-        margin: 12px;
-        gap: 12px;
-      }
-      .banner_text h1 { font-size: 22px; }
-      .banner_text p { font-size: 14px; }
-      .gallery-left img {
-        max-width: 90px;
-        width: 28%;
-      }
-      .sub-text { font-size: 16px; }
-      .btn { padding: 10px 18px; font-size: 15px; border-radius: 24px; }
-      .strip-track img { height: 60px; }
-      .strip-track { gap: 12px; animation-duration: 30s; }
-      nav.navbar ul {
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-        padding: 8px 0;
-      }
-      footer { padding: 14px; text-align: center; font-size: 14px; }
-    }
-
-    /* Make all images scale safely */
-    img { max-width: 100%; height: auto; display: block; }
-
+    
     .btn {
     background: #3a1e05;
     color: #fff;
@@ -147,6 +89,65 @@
     transform: translateX(-50%);  /* move left */
   }
 }
+
+/* Responsive tweaks: add this at the end of the existing <style> block */
+    @media (max-width: 900px) {
+      .intro-section {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 24px;
+        gap: 20px;
+      }
+      .gallery-left, .text-right {
+        width: 100%;
+        text-align: center;
+      }
+      .text-right { text-align: left; }
+      .gallery-left img {
+        max-width: 120px;
+        width: calc(25% - 8px);
+        margin: 8px;
+        display: inline-block;
+      }
+      .sub-text {
+        font-size: 18px;
+        line-height: 1.45;
+      }
+      .btn {
+        padding: 12px 24px;
+        font-size: 16px;
+      }
+      .image-strip { padding: 14px 0; }
+      .strip-track img { height: 80px; }
+      .strip-track { gap: 20px; animation-duration: 25s; }
+    }
+
+    @media (max-width: 480px) {
+      .intro-section {
+        margin: 12px;
+        gap: 12px;
+      }
+      .banner_text h1 { font-size: 22px; }
+      .banner_text p { font-size: 14px; }
+      .gallery-left img {
+        max-width: 90px;
+        width: 28%;
+      }
+      .sub-text { font-size: 16px; }
+      .btn { padding: 10px 18px; font-size: 15px; border-radius: 24px; }
+      .strip-track img { height: 60px; }
+      .strip-track { gap: 12px; animation-duration: 30s; }
+      nav.navbar ul {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        padding: 8px 0;
+      }
+      footer { padding: 14px; text-align: center; font-size: 14px; }
+    }
+
+    /* Make all images scale safely */
+    img { max-width: 100%; height: auto; display: block; }
 
   </style>
 </head>
