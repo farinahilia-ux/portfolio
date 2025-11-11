@@ -147,20 +147,29 @@
       .banner_text p { font-size: 14px; }
 
       .gallery-left {
-    display: grid;
-    grid-template-columns: 2fr; /* 1 image per row */
-    gap: 12px;                  /* spacing between images */
-    width: 100%;
-    justify-items: center;
-  }
-      
-      .gallery-left img {
-        max-width: 90px;
-      }
+  width: 100%;
+  text-align: left; /* aligns images to the left */
+  display: flex;    /* use flexbox to line them up */
+  flex-wrap: wrap;  /* allow wrapping if too many images */
+  gap: 8px;         /* spacing between images */
+}
+
+.gallery-left img {
+  width: calc(50% - 8px);  /* 2 images per row */
+  max-width: 90px;
+  border-radius: 10px;
+  margin: 0;       /* gap handles spacing now */
+}
       .text-right {
-    text-align: left;           /* paragraphs align normally */
-    max-width: 100%;            /* prevent stretching */
-  }
+  width: 100%;
+  text-align: left;   /* paragraph aligned left */
+}
+
+.text-right p.sub-text {
+  white-space: normal; /* allow wrapping */
+  line-height: 1.4;    /* makes paragraph easier to read */
+  margin-bottom: 12px; /* spacing between paragraphs */
+}
       .sub-text { font-size: 16px; }
       .btn { padding: 10px 18px; font-size: 15px; border-radius: 24px; }
       .strip-track img { height: 60px; }
