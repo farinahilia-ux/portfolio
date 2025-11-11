@@ -102,27 +102,36 @@
         margin: 24px;
         gap: 28px;
       }
+
       .gallery-left {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 per row */
+        gap: 12px;
         width: 100%;
         text-align: center;
       }  
+
       .text-right {
     width: 100%;
     text-align: center;
       }
+
         .gallery-left img {
         max-width: 100px;
         margin: 8px;
         display: inline-block;
       }
+
       .sub-text {
         font-size: 18px;
         line-height: 1.45;
       }
+
       .btn {
         padding: 12px 24px;
         font-size: 16px;
       }
+
       .image-strip { padding: 14px 0; }
       .strip-track img { height: 80px; }
       .strip-track { gap: 20px; animation-duration: 25s; }
@@ -133,8 +142,18 @@
         margin: 12px;
         gap: 12px;
       }
+
       .banner_text h1 { font-size: 22px; }
       .banner_text p { font-size: 14px; }
+
+      .gallery-left {
+    grid-template-columns: 1fr; /* 1 per row on small screens */
+    text-align: center;
+  }
+      .text-right {
+    text-align: left;           /* paragraphs align normally */
+    max-width: 100%;            /* prevent stretching */
+  }
       .gallery-left img {
         max-width: 90px;
         width: 28%;
@@ -149,6 +168,7 @@
         gap: 12px;
         padding: 8px 0;
       }
+
       footer { padding: 14px; text-align: center; font-size: 14px; }
     }
 
